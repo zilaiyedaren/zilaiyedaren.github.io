@@ -14,7 +14,7 @@ layout: null
         <title>{{ post.title | xml_escape }}</title>
         <link>{{ post.url | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
-	<description> {{ post.content | truncatewords: 20 }}
+	<description> {{ post.content | truncatewords: 50 }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       </item>
     {% endfor %}
