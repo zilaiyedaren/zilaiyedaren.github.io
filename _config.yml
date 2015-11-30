@@ -13,7 +13,7 @@ theme:
   yoursitetitle: 自来也大人博客
   gravatar: # Email MD5 hash
   description: "used by search engines" # used by search engines
-  visiblewords: 500
+  visiblewords: 300
   # Header and footer text
   header_text: >
      有叶子飞舞的地方，就有自来也大人的微笑！
