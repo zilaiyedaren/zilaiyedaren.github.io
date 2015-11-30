@@ -15,15 +15,7 @@ layout: null
         <link>{{ post.url | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
         <!--<description>{{ post.content | xml_escape }}</description>-->
-        
-		{% assign num = post.content | xml_escape %}
-		  {% if  num  < 100 %}
-		    <description>{{ post.content | xml_escape }}</description>
-		  {% else %}
-		   <description> {{ post.content | xml_escape | truncatewords: 100 }}
-		     	 {{ site.theme.str_continue_reading }}</description>
-		  {% endif %}
-	
+	<description> {{ post.content | xml_escape | truncatewords: 100 }}
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       </item>
     {% endfor %}
