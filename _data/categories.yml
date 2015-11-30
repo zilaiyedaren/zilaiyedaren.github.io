@@ -1,0 +1,10 @@
+- slug: ios
+  name: iOS
+#  color: '#3498db'
+  
+- slug: swift
+  name: Swift
+#  color: '#3498db'
+
+- slug: other
+  name: 其他

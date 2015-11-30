@@ -1,0 +1,86 @@
+# SITE CONFIGURATION
+baseurl: "https://zilaiyedaren.github.io" # set it to "/" if use for personal site. The subpath of your site, e.g. /blog/
+baseurl: "https://zilaiyedaren.github.io" # the subpath of your site, e.g. /blog/
+url: "https://zilaiyedaren.github.io" # the base hostname & protocol for your site
+imageurl: "https://source.unsplash.com/category/nature/2600x500" #"https://unsplash.it/2600/500?random"
+
+# THEME-SPECIFIC CONFIGURATION
+theme:
+  # Meta
+  title: 自来也大人博客
+  #avatar: avatar.png
+  hometitle: 首页 #display on navigation menu.
+  yoursitetitle: 自来也大人博客
+  gravatar: # Email MD5 hash
+  description: "used by search engines" # used by search engines
+  visiblewords: 300#在摘要中显示字数
+  # Header and footer text
+  header_text: >
+     有叶子飞舞的地方，就有自来也大人的微笑！
+
+  header_text_feature_image: img/sample_feature_img.png
+  place_holder_image: img/sample_feature_img.png
+  footer_text: >
+   <a href="http://zilaiyedaren.github.io">自来也大人博客</a> 
+
+  # Icons
+  rss: "/feed.xml"
+  email_address: "it.kent.wu@gmail.com" 
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: "zilaiyedaren"
+  weibo: 
+  google_plus:
+  instagram:
+  linkedin:  # Full URL
+  pinterest: 
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  twitter: "itkentwu1"
+  wordpress:
+  youtube:
+
+  # Scripts
+  google_analytics: "UA-70839735-1" # Tracking ID, e.g. "UA-000000-01"
+  disqus_shortname: "zilaiyedaren"
+  katex: true # Enable if using math markup
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  #str_next: "Next"
+  #str_prev: "Prev"
+  #点击显示整篇文章
+  str_continue_reading: "更多..."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+  
+  # Post navigation
+  post_navigation: false
+
+# PAGINATION
+enforce_ssl: "zilaiyedaren.github.io"
+paginate: 5
+paginate_path: "blog/page:num"
+permalink: /blog/:title/  #Delete preurl '/' if used for your personal site.
+
+# Posted in ... with ...
+sechby: 
+  category:   #in
+  tag:   #with
+
+# BUILD SETTINGS
+markdown: redcarpet
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: :compressed
