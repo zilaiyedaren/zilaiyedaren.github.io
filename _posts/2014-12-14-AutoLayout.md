@@ -3,6 +3,7 @@ layout: post
 title:  "Auto Layout"
 date:   2014-12-14
 author: 自来也大人
+feature-img: "img/touring.jpg"
 category: ios
 tag: Auto Layout
 #tags: [ios, github]
