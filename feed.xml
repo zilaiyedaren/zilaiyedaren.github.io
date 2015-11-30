@@ -20,8 +20,8 @@ layout: null
 		  {% if  num  < 100 %}
 		    <description>{{ post.content | xml_escape }}</description>
 		  {% else %}
-		    {{ post.content |xml_escape| truncatewords: 100 }}
-		     	<description> {{ site.theme.str_continue_reading }}</description>
+		   <description> {{ post.content | xml_escape | truncatewords: 100 }}
+		     	 {{ site.theme.str_continue_reading }}</description>
 		  {% endif %}
 	
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
