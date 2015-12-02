@@ -231,8 +231,6 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header { top: 62px; }
 
 /* #archive { padding:0 0 0 30%; } */
 #archive{padding:0}
-#archive h3{color:#999}
-.post-link{font-size:15px}
 	/* Transparent Nav */
 	.et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container,
 	.et_fixed_nav.et_show_nav #page-container { padding-top: 54px; }
