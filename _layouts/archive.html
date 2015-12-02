@@ -9,7 +9,12 @@ permalink: /archive/
 {% for post in page.posts %}
   <li>
     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+	</a>
+	{% if post.category and post.tags %}
+	<a class="subtitle">{{ category_content }}</a> <a class="subtitle">{{ tags_content }}</a>
+	{% endif %}
   </li>
 {% endfor %}
 </ul>
