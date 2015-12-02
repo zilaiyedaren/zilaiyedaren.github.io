@@ -461,16 +461,16 @@ Markdown 使用星号`（*）`和底线`（_）`作为标记强调字词的符�
 **自动链接**
 
 Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：
-    <http://example.com/>
+   ` <http://example.com/>`
 
 Markdown 会转为：
-    <a href="http://example.com/">http://example.com/</a>
+    `<a href="http://example.com/">http://example.com/</a>`
 
 邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：
-    <address@example.com>
+    `<address@example.com>`
 
 Markdown 会转成：
-    <a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
+        <a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
     &#115;&#115;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6C;e&#x2E;&#99;&#111;
     &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
     &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
