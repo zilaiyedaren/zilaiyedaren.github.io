@@ -502,6 +502,21 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
     .   英文句点
     !   惊叹号
 
+## Markdown高亮语法 ##
+在编辑博客时，往往会插入代码，怎么样使之产生不同语言所对应的高亮显示呢？
+
+	```语言全名
+	   code
+	 ```
+如，我使用OC写的代码：
+	```Objectice-C
+	NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+    	if ([[UIApplication sharedApplication] canOpenURL:url])
+    	{
+    		[[UIApplication sharedApplication] openURL:url];
+    	}
+	```
+
 ## Markdown 免费编辑器 ##
 
 **Windows 平台**
