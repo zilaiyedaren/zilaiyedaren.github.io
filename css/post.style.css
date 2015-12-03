@@ -18,6 +18,21 @@ h5{font-size:0.83em;line-height:1.80723em;margin-top:1.80723em;margin-bottom:1.8
 h6{font-size:0.67em;line-height:2.23881em;margin-top:2.23881em;margin-bottom:2.23881em}
 mark{background:#ff0;color:#000}
 p,pre{margin:0 0 15px 0; font-weight: normal;}
+/*新增代码格式样式*/
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: 9.5px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sup{top:-0.5em}
