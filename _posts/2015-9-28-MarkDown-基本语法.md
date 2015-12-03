@@ -11,11 +11,11 @@ tag: 转载
 ************
 **概述**
 
-Markdown 的目标是实现「易读易写」。
+Markdown 的目标是实现`「易读易写」`。
 
 可读性，无论如何，都是最重要的。一份使用 Markdown 格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown 语法受到一些既有 text-to-HTML 格式的影响，包括 Setext、atx、Textile、reStructuredText、Grutatext 和 EtText，而最大灵感来源其实是纯文本电子邮件的格式。
 
-总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。
+总之， Markdown 的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像`*强调*`。Markdown 的列表看起来，嗯，就是列表。Markdown 的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。
 
 ************
 **兼容 HTML**
@@ -55,7 +55,7 @@ HTML 的区段（行内）标签如 `<span>、<cite>、<del> `可以在 Markdown
 
 才能放到链接标签的 href 属性里。不用说也知道这很容易忽略，这也可能是 HTML 标准检验所检查到的错误中，数量最多的。
 Markdown 让你可以自然地书写字符，需要转换的由它来处理好了。如果你使用的` &` 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成` &amp;`。
-所以你如果要在文档中插入一个版权符号 ©，你可以这样写：
+所以你如果要在文档中插入一个版权符号 `©`，你可以这样写：
     &copy;
 
 Markdown 会保留它不动。而若你写：
@@ -91,27 +91,27 @@ Markdown 将会把它转换为：
 **Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。**
 
 类 Setext 形式是用底线的形式，利用 `= （最高阶标题）`和 `- （第二阶标题）`，例如：
-    This is an H1
-    =============
+    	This is an H1
+    	=============
     
-    This is an H2
-    -------------
+    	This is an H2
+    	-------------
 
 任何数量的` = 和 - `都可以有效果。
 
 类 Atx 形式则是在行首插入 1 到 6 个` #` ，对应到标题 1 到 6 阶，例如：
-    # 这是 H1
+    \# 这是 H1
     
-    ## 这是 H2
+    \## 这是 H2
        
-    ###### 这是 H6
+    \###### 这是 H6
 
 你可以选择性地`「闭合」`类 atx 样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 `#`，而行尾的` #` 数量也不用和开头一样（行首的井字符数量决定标题的阶数）：
-    # 这是 H1 #
+    \# 这是 H1 #
     
-    ## 这是 H2 ##
+    \## 这是 H2 ##
     
-    ### 这是 H3 ######
+    \### 这是 H3 ######
 
 **区块引用 Blockquotes**
 
@@ -183,22 +183,22 @@ Markdown 支持有序列表和无序列表。
 如果你使用懒惰的写法，建议第一个项目最好还是从 1. 开始，因为 Markdown 未来可能会支持有序列表的 start 属性。
 列表项目标记通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符。
 要让列表看起来更漂亮，你可以把内容用固定的缩进整理好：
-    *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    \*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
     Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
     viverra nec, fringilla in, laoreet vitae, risus.
-    *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    \*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
     Suspendisse id sem consectetuer libero luctus adipiscing.
 
 但是如果你懒，那也行：
-    *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    \*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
     Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
     viverra nec, fringilla in, laoreet vitae, risus.
-    *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    \*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
     Suspendisse id sem consectetuer libero luctus adipiscing.
 
 **如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 <p> 标签包起来，举例来说：**
-    *   Bird
-    *   Magic
+    \*   Bird
+    \*   Magic
 
 会被转换为：
     <ul>
@@ -207,9 +207,9 @@ Markdown 支持有序列表和无序列表。
     </ul>
 
 但是这个：
-    *   Bird
+    \*   Bird
     
-    *   Magic
+    \*   Magic
 
 会被转换为：
     <ul>
@@ -272,7 +272,7 @@ Markdown 会转换成：
 
 一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
 
-**在代码区块里面， & 、 < 和 > 会自动转成 HTML 实体**，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，再加上缩进就可以了，剩下的 Markdown 都会帮你处理，例如：
+**在代码区块里面，` & 、 < 和 >` 会自动转成 HTML 实体**，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，再加上缩进就可以了，剩下的 Markdown 都会帮你处理，例如：
     <div class="footer">
     &copy; 2004 Foo Corporation
     </div>
