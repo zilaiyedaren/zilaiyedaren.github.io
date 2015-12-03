@@ -18,6 +18,7 @@ tag: 整合
 
 定位服务有很多APP都有，如果用户关闭了定位，那么，在APP里面可以提示用户打开定位服务。点击到设置界面设置，直接跳到定位服务设置界面。代码如下：
 
+```Objective-c
     //定位服务设置界面
 
     NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
@@ -26,7 +27,7 @@ tag: 整合
     {
     	[[UIApplication sharedApplication] openURL:url];
     }
-
+```
 其他的跳转Facetime、墙纸设置界面、蓝牙设置界面、音乐、iCloud设置界面界面都是同样的原理。
 
 **参数配置**
