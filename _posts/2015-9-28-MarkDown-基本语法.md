@@ -468,13 +468,19 @@ Markdown 使用星号`（*）`和底线`（_）`作为标记强调字词的符�
 **代码**
 
 **如果要标记一小段行内代码，你可以用反引号把它包起来`（`）`**，例如：
-   ``` Use the `printf()` function.```
+   ```
+    Use the `printf()` function.
+    ```
 
 会产生：
-   ``` <p>Use the <code>printf()</code> function.</p>```
+   ```
+    <p>Use the <code>printf()</code> function.</p>
+    ```
 
 **如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段**：
-   ````There is a literal backtick (`) here.````
+   ```
+    `There is a literal backtick (`) here.`
+    ```
 
 这段语法会产生：
     ```<p><code>There is a literal backtick (`) here.</code></p>```
@@ -492,13 +498,19 @@ Markdown 使用星号`（*）`和底线`（_）`作为标记强调字词的符�
     <p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 ```
 在代码区段内，& 和尖括号都会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易，Markdown 会把下面这段：
- ```   Please don't use any `<blink>` tags.```
+ ``` 
+    Please don't use any `<blink>` tags.
+ ```
 
 转为：
-  ```  <p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>```
+  ```
+    <p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
+  ```
 
 你也可以这样写：
-  ```  `&#8212;` is the decimal-encoded equivalent of `&mdash;`.```
+  ```
+    `&#8212;` is the decimal-encoded equivalent of `&mdash;`.
+  ```
 
 以产生：
  ```
@@ -524,10 +536,14 @@ Markdown 使用星号`（*）`和底线`（_）`作为标记强调字词的符�
     接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。
 
 参考式的图片语法则长得像这样：
-```    ![Alt text][id]```
+```
+    ![Alt text][id]
+```
 
 `「id」`是图片参考的名称，图片参考的定义方式则和连结参考一样：
-  ```  [id]: url/to/image  "Optional title attribute"```
+  ```
+    [id]: url/to/image  "Optional title attribute"
+  ```
 
 **到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 <img> 标签。**
 
@@ -539,9 +555,9 @@ Markdown 支持以比较简短的自动链接形式来处理网址和电子邮�
   ```
 
 Markdown 会转为：
-    ``` 
+``` 
     <a href="http://example.com/">http://example.com/</a> 
-    ```
+```
 
 邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：
     `<address@example.com>`
@@ -578,10 +594,10 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
 ```
 ## Markdown高亮语法 ##
 在编辑博客时，往往会插入代码，怎么样使之产生不同语言所对应的高亮显示呢？
-
-```语言全名
-code
-```
+    
+    ```语言全名
+    code
+    ```
 如，我使用OC写的代码：
 
 ```Objectice-C
