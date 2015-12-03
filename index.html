@@ -30,7 +30,7 @@ layout: default
 		  {% if  num  < site.theme.visiblewords %}
 		    {{ post.content }}
 		  {% else %}
-		    {{ post.content | truncatewords: 300 |strip_html }}
+		    {{ post.content | truncatewords: 300 | strip_html }}
 		    <p>
 		    <a class="text" href="{{ post.url | prepend: site.baseurl }}">
 		      {{ site.theme.str_continue_reading }}
