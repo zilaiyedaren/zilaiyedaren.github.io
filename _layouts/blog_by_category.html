@@ -28,17 +28,18 @@ layout: default
 		    </p>
 		  </header>
 		  <div class="excerpt">
-		  {% assign num = post.content | number_of_words %}
-		  {% if  num  < site.theme.visiblewords %}
-		    {{ post.content }}
-		  {% else %}
-		    {{ post.content | truncatewords: 300 }}
-		    <p>
-		    <a class="text" href="{{ post.url | prepend: site.baseurl }}">
-		      {{ site.theme.str_continue_reading }}
-		    </a>
-		    </p>
-		  {% endif %}
+		  <!--{% assign num = post.content | number_of_words %}-->
+		  <!--{% if  num  < site.theme.visiblewords %}-->
+		  <!--  {{ post.content }}-->
+		  <!--{% else %}-->
+		  <!--  {{ post.content | truncatewords: 300 }}-->
+		  <!--  <p>-->
+		  <!--  <a class="text" href="{{ post.url | prepend: site.baseurl }}">-->
+		  <!--    {{ site.theme.str_continue_reading }}-->
+		  <!--  </a>-->
+		  <!--  </p>-->
+		  <!--{% endif %}-->
+		  {{ post.content }}
 		  </div>
 		</div>
         {% endfor %}
@@ -47,5 +48,33 @@ layout: default
         <p>There are no posts for this category.</p>
     {% endif %}
 </div>
+
+<!--分页显示-->
+<div class="wp-pagenavi">
+	    <span class='pages'>第 {{ paginator.page }} 页，共 {{ paginator.total_pages }} 页</span>
+
+	    {% if paginator.previous_page %}
+	    	<a class="previouspostslink" rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" > « </a>
+	    {% endif %}
+
+	      {% if paginator.page == 1 %}
+	        <span class="current">1</span>
+	      {% else %}
+	        <a class="page larger" href="/">1</a>
+	      {% endif %}
+	   
+	    {% for count in (2..paginator.total_pages) %}
+	        {% if count == paginator.page %}
+	          <span class="current">{{ count }}</span>
+	        {% else %}
+	          <a class="page larger" href="{{ site.baseurl }}/blog/page{{ count }}">{{ count }}</a>
+	        {% endif %}
+	    {% endfor %}
+
+	    {% if paginator.next_page %}
+	    	<a class="nextpostslink" rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" > » </a>
+	    {% endif %}
+
+	</div>
 
 </div>
