@@ -17,7 +17,11 @@ permalink: /archives/
         <ul class="past">
       {% endif %}
     {% endunless %}
-      <li><time>{{ post.date | date:"%b %-d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <time>{{ post.date | date:"%b %-d" }}</time>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{{ post.url }}">{{ post.title }}
+      </a>
+      </li>
   {% endfor %}
   </ul>
 </section>
