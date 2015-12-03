@@ -30,6 +30,7 @@ tag: 整合
 其他的跳转Facetime、墙纸设置界面、蓝牙设置界面、音乐、iCloud设置界面界面都是同样的原理。
 
 **参数配置**
+
 首先设置一个跳转的URL，URL里面有需要跳转页面的设置字符串`@prefs:root=XXX`,想跳到哪个设置界面只需要prefs:root=后面的值即可,所以统一的代码格式如下：
 
 	NSURL *url = [NSURL URLWithString:@"prefs:root=XXX"];
@@ -89,8 +90,8 @@ tag: 整合
 在开发IOS项目的时候，有可能会遇到两个APP应用相互调用的需求，比如说：支付宝支付、使用第三方登录，分享到微信等等。
 
 **下面来详细介绍实现的步骤：**
-1，在App1中添加URL Types项
 
+1，在App1中添加URL Types项
 打开项目中info.plist文件，在infomation property list项下面增加一项URL Typs
 
 2，配置URL Scheme
@@ -136,7 +137,10 @@ tag: 整合
 那么作为一个Provider怎么去接收Customer传递过来的参数呢？
 首先，在找到项目中的AppDelegate.m文件，然后找到openURL方法(如果没有就去实现它),实现过程如下：
 	
-		- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+		- (BOOL)application:(UIApplication *)application 
+			    openURL:(NSURL *)url 
+		  sourceApplication:(NSString *)sourceApplication 
+			 annotation:(id)annotation
 		{
     		NSString *urlStr = [url absoluteString];
     		if ([urlStr hasPrefix:@"myAppDemo://"]) {
@@ -186,22 +190,18 @@ tag: 整合
 ## 4.ios应用内跳转到appstore里评分 ##
 **在ios6.0前跳转到appstore评分一般是直接跳转到appstore评分**
 
-	NSString *evaluateString = [NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",myAppID];
+	NSString *evaluateString = [NSString 		 stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d",myAppID];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:evaluateString]];
 
 **在ios6.0，APPle增加了一个新功能，当用户需要给APP评分时候，不再跳转到appstore了，可以在应用内实现打开appstore，苹果提供了一个框架StoreKit.framework,实现步骤如下:**
 
   1:导入StoreKit.framework,在需要跳转的控制器里面添加头文件#import
 
-
-  2:实现代理SKStoreProductViewControllerDelegate
-
-  
   2:实现代理SKStoreProductViewControllerDelegate
   
-
   3:
-		- (void)evaluate{
+	
+	- (void)evaluate{
 			static NString *appId =@"111111"; 
 		    //初始化控制器
 		    SKStoreProductViewController *storeProductViewContorller = [[SKStoreProductViewController alloc] init];
