@@ -190,9 +190,15 @@ tag: 整合
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:evaluateString]];
 
 **在ios6.0，APPle增加了一个新功能，当用户需要给APP评分时候，不再跳转到appstore了，可以在应用内实现打开appstore，苹果提供了一个框架StoreKit.framework,实现步骤如下:**
+
   1:导入StoreKit.framework,在需要跳转的控制器里面添加头文件#import
 
+
   2:实现代理SKStoreProductViewControllerDelegate
+
+  
+  2:实现代理SKStoreProductViewControllerDelegate
+  
 
   3:
 		- (void)evaluate{
