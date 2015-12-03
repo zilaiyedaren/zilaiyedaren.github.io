@@ -26,8 +26,11 @@ layout: default
 		    </p>
 		  </header>
 		  <div class="excerpt">
-		  	<p> {{ post.excerpt }} </p>
-		  	<!--{% assign num = post.content | number_of_words %}-->
+		  	<!--截取博客第一段为摘要-->
+		  	<!--<p> {{ post.excerpt }} </p>-->
+		  
+		  <!--截取规定字数，在截取时，需要过滤掉HTML标签，不然会产生CSS样式混乱-->
+		  <!--{% assign num = post.content | number_of_words %}-->
 		  <!--{% if  num  < site.theme.visiblewords %}-->
 		  <!--  {{ post.content }}-->
 		  <!--{% else %}-->
@@ -38,6 +41,9 @@ layout: default
 		    <!--</a>-->
 		  <!--  </p>-->
 		  <!--{% endif %}-->
+		  
+		  <!--直接显示博客全文-->
+		  {{ post.content }}
 		</div>
 		{% endfor %}
 	</div>
