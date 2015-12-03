@@ -600,7 +600,7 @@ Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的�
     ```
 如，我使用OC写的代码：
 
-```Objectice-C
+```Objective-C
     NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
     if ([[UIApplication sharedApplication] canOpenURL:url])
     {
