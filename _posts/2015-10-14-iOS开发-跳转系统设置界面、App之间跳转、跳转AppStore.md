@@ -45,7 +45,7 @@ if([[UIApplication sharedApplication] canOpenUrl;url])
 
 下面列出可以跳到这些界面的参数配置：
 
-```HTML5
+```Objective-c
 Wi-Fi — prefs:root=WIFI
 Bluetooth — prefs:root=General&path=Bluetooth
 FaceTime — prefs:root=FACETIME
