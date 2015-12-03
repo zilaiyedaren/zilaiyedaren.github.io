@@ -51,32 +51,34 @@ HTML 的区段（行内）标签如 `<span>、<cite>、<del> `可以在 Markdown
 
 `& 字符`尤其让网络文档编写者受折磨，如果你要打`「AT&T」` ，你必须要写成`「AT&amp;T」`。而网址中的` & `字符也要转换。比如你要链接到： 
 ```
-http://images.google.com/images?num=30&q=larry+bird
+    http://images.google.com/images?num=30&q=larry+bird
 ```
 你必须要把网址转换写为：
 ```
-http://images.google.com/images?num=30&amp;q=larry+bird
+    http://images.google.com/images?num=30&amp;q=larry+bird
 ```
 
 才能放到链接标签的 href 属性里。不用说也知道这很容易忽略，这也可能是 HTML 标准检验所检查到的错误中，数量最多的。
 Markdown 让你可以自然地书写字符，需要转换的由它来处理好了。如果你使用的` &` 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成` &amp;`。
 所以你如果要在文档中插入一个版权符号 `©`，你可以这样写：
 ```   
-&copy;
+    &copy;
 ```
 Markdown 会保留它不动。而若你写：
 ```
-AT&T
+    AT&T
 ```
 Markdown 就会将它转为：
 ```
-AT&amp;T
+    AT&amp;T
 ```
 类似的状况也会发生在` < `符号上，因为 Markdown 允许兼容 HTML ，如果你是把 `< `符号作为 HTML 标签的定界符使用，那 Markdown 也不会对它做任何转换，但是如果你写：
     ```4 < 5```
 
 Markdown 将会把它转换为：
-    ```4 &lt; 5```
+ ```
+    4 &lt; 5
+ ```
 
 不过需要注意的是，code 范围内，不论是行内还是区块， `<` 和` &` 两个符号都一定会被转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML code （和 HTML 相对而言， HTML 语法中，你要把所有的 `< 和 &` 都转换为 HTML 实体，才能在 HTML 文件里面写出 HTML code。）
 
@@ -100,33 +102,33 @@ Markdown 将会把它转换为：
 
 类 Setext 形式是用底线的形式，利用 `= （最高阶标题）`和 `- （第二阶标题）`，例如：
 ```
-This is an H1
+    This is an H1
+    
+    =============
+    
+    This is an H2
 
-=============
-
-This is an H2
-
--------------
+    -------------
 ```
 任何数量的` = 和 - `都可以有效果。
 
 类 Atx 形式则是在行首插入 1 到 6 个` #` ，对应到标题 1 到 6 阶，例如：
  ```   
-# 这是 H1
-
-## 这是 H2
-
-###### 这是 H6
+    # 这是 H1
+    
+    ## 这是 H2
+    
+    ###### 这是 H6
   ```
 
 你可以选择性地`「闭合」`类 atx 样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 `#`，而行尾的` #` 数量也不用和开头一样（行首的井字符数量决定标题的阶数）：
 
 ```    
-# 这是 H1 #
-
-## 这是 H2 ##
-
-### 这是 H3 ######
+    # 这是 H1 #
+    
+    ## 这是 H2 ##
+    
+    ### 这是 H3 ######
 ```
 **区块引用 Blockquotes**
 
@@ -150,22 +152,22 @@ Markdown 也允许你偷懒只在整个段落的第一行最前面加上 > ：
 ```
 区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的` >` ：
  ```
-> This is the first level of quoting.
->
-> > This is nested blockquote.
->
-> Back to the first level.
+    > This is the first level of quoting.
+    >
+    > > This is nested blockquote.
+    >
+    > Back to the first level.
 ```
 引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：
  ```
-> ## 这是一个标题。
-> 
-> 1.   这是第一行列表项。
-> 2.   这是第二行列表项。
-> 
-> 给出一些例子代码：
-> 
-> return shell_exec("echo $input | $markdown_script");
+    > ## 这是一个标题。
+    > 
+    > 1.   这是第一行列表项。
+    > 2.   这是第二行列表项。
+    > 
+    > 给出一些例子代码：
+    > 
+    > return shell_exec("echo $input | $markdown_script");
 ```
 任何像样的文本编辑器都能轻松地建立 email 型的引用。例如在 BBEdit 中，你可以选取文字后然后从选单中选择增加引用阶层。
 
@@ -279,10 +281,14 @@ Markdown 支持有序列表和无序列表。
     <代码写在这>
 ```
 当然，项目列表很可能会不小心产生，像是下面这样的写法：
-   ```1986. What a great season.```
+```
+    1986. What a great season.
+```
 
 换句话说，也就是在行首出现数字-句点-空白，要避免这样的状况，你可以在句点前面加上反斜杠。
-    ```1986\. What a great season.```
+```
+    1986\. What a great season.
+```
 
 **代码区块**
 
@@ -290,32 +296,32 @@ Markdown 支持有序列表和无序列表。
 
 **要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以**
 ```
-这是一个普通段落：
-
-这是一个代码区块。
+    这是一个普通段落：
+    
+    这是一个代码区块。
 ```
 Markdown 会转换成：
 ```
-<p>这是一个普通段落：</p>
-
-<pre><code>这是一个代码区块。
-</code></pre>
+    <p>这是一个普通段落：</p>
+    
+    <pre><code>这是一个代码区块。
+    </code></pre>
 ```
 
 一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。
 
 **在代码区块里面，` & 、 < 和 >` 会自动转成 HTML 实体**，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，再加上缩进就可以了，剩下的 Markdown 都会帮你处理，例如：
 ```
-<div class="footer">
-&copy; 2004 Foo Corporation
-</div>
+    <div class="footer">
+    &copy; 2004 Foo Corporation
+    </div>
 ```
 会被转换为：
 ```
-<pre><code>&lt;div class="footer"&gt;
-&amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
+    <pre><code>&lt;div class="footer"&gt;
+    &amp;copy; 2004 Foo Corporation
+    &lt;/div&gt;
+    </code></pre>
 ```
 **代码区块中，一般的 Markdown 语法不会被转换，像是星号便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。**
 
@@ -334,30 +340,36 @@ Markdown 支持两种形式的链接语法： **行内式和参考式两种形�
 
 **要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可**，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
 ```
-This is [an example](http://example.com/ "Title") inline link.
-
-[This link](http://example.net/) has no title attribute.
+    This is [an example](http://example.com/ "Title") inline link.
+    
+    [This link](http://example.net/) has no title attribute.
 ```
 会产生：
 ```
-<p>This is <a href="http://example.com/" title="Title">
-an example</a> inline link.</p>
-
-<p><a href="http://example.net/">This link</a> has no
-    title attribute.</p>
+    <p>This is <a href="http://example.com/" title="Title">
+    an example</a> inline link.</p>
+    
+    <p><a href="http://example.net/">This link</a> has no
+        title attribute.</p>
 ```
 如果你是要链接到同样主机的资源，你可以使用相对路径：
 ```
     See my [About](/about/) page for details.
 ```
 参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
-```This is [an example][id] reference-style link.``
+```
+    This is [an example][id] reference-style link.
+```
 
 你也可以选择性地在两个方括号中间加上一个空格：
-    ```This is [an example] [id] reference-style link.```
+ ```
+    This is [an example] [id] reference-style link.
+```
 
 接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
-   ``` [id]: http://example.com/  "Optional Title Here"```
+``` 
+    [id]: http://example.com/  "Optional Title Here"
+```
 
 链接内容定义的形式为：
     方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字
@@ -369,53 +381,61 @@ an example</a> inline link.</p>
 **请注意：有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。**
 
 链接网址也可以用尖括号包起来：
-  ```  [id]: <http://example.com/>  "Optional Title Here"```
+```
+    [id]: <http://example.com/>  "Optional Title Here"
+```
 
 你也可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话，这样会比较好看：
   ``` 
-  [id]: http://example.com/longish/path/to/resource/here
+    [id]: http://example.com/longish/path/to/resource/here
     "Optional Title Here"
   ```
 
 网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。
 链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，因此下面两个链接是一样的：
 ```  
- [link text][a]
-   [link text][A]
+    [link text][a]
+    [link text][A]
 ```
 隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
   ```  
-  [Google][]
+    [Google][]
   ```
 
 然后定义链接内容：
-  ```  [Google]: http://google.com/ ```
+ ```
+    [Google]: http://google.com/ 
+ ```
 
 由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词：
-```    Visit [Daring Fireball][] for more information.```
+```
+    Visit [Daring Fireball][] for more information.
+```
 
 然后接着定义链接：
-   ``` [Daring Fireball]: http://daringfireball.net/```
+```
+    [Daring Fireball]: http://daringfireball.net/
+```
 
 链接的定义可以放在文件中的任何一个地方，直接放在链接出现段落的后面，也可以把它放在文件最后面，就像是注解一样。
 
 **下面是一个参考式链接的范例：**
-   ```
+```
     I get 10 times more traffic from [Google] [1] than from
     [Yahoo] [2] or [MSN] [3].
     
-      [1]: http://google.com/"Google"
-      [2]: http://search.yahoo.com/  "Yahoo Search"
-      [3]: http://search.msn.com/"MSN Search"
+    [1]: http://google.com/"Google"
+    [2]: http://search.yahoo.com/  "Yahoo Search"
+    [3]: http://search.msn.com/"MSN Search"
 ```
 如果改成用链接名称的方式写：
  ```
     I get 10 times more traffic from [Google][] than from
     [Yahoo][] or [MSN][].
     
-      [google]: http://google.com/"Google"
-      [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-      [msn]:http://search.msn.com/"MSN Search"
+    [google]: http://google.com/"Google"
+    [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+    [msn]:http://search.msn.com/"MSN Search"
 ```
 上面两种写法都会产生下面的 HTML。
 ```
@@ -440,7 +460,9 @@ Markdown 使用星号`（*）`和底线`（_）`作为标记强调字词的符�
 
 **但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。**
 如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：
-  ```  \*this text is surrounded by literal asterisks\* ```
+```
+    \*this text is surrounded by literal asterisks\* 
+```
 
 
 **代码**
@@ -526,10 +548,10 @@ Markdown 会转为：
 
 Markdown 会转成：
 ```	
-<a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
-&#115;&#115;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6C;e&#x2E;&#99;&#111;
-&#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
-&#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
+    <a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
+    &#115;&#115;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6C;e&#x2E;&#99;&#111;
+    &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
+    &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 ```
 在浏览器里面，这段字串（其实是` <a href="mailto:address@example.com">address@example.com</a>`）会变成一个可以点击的`「address@example.com」`链接。
 （这种作法虽然可以糊弄不少的机器人，但并不能全部挡下来，不过总比什么都不做好些。不管怎样，公开你的信箱终究会引来广告信件的。）
@@ -541,18 +563,18 @@ Markdown 会转成：
 
 Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
 ```
-\   反斜线
-`   反引号
-\*   星号
-\_   底线
-{}  花括号
-[]  方括号
-()  括弧
-\#   井字号
-\+   加号
-\-   减号
-.   英文句点
-!   惊叹号
+    \   反斜线
+    `   反引号
+    \*   星号
+    \_   底线
+    {}  花括号
+    []  方括号
+    ()  括弧
+    \#   井字号
+    \+   加号
+    \-   减号
+    .   英文句点
+    !   惊叹号
 ```
 ## Markdown高亮语法 ##
 在编辑博客时，往往会插入代码，怎么样使之产生不同语言所对应的高亮显示呢？
@@ -563,11 +585,11 @@ code
 如，我使用OC写的代码：
 
 ```Objectice-C
-NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
-if ([[UIApplication sharedApplication] canOpenURL:url])
-{
-[[UIApplication sharedApplication] openURL:url];
-}
+    NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+    if ([[UIApplication sharedApplication] canOpenURL:url])
+    {
+    [[UIApplication sharedApplication] openURL:url];
+    }
 ```
 
 ## Markdown 免费编辑器 ##
