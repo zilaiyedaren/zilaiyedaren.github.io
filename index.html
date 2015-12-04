@@ -48,7 +48,11 @@ layout: default
 		</div>
 		{% endfor %}
 	</div>
-
+	
+	<p>
+    		<a href="javascript:return false;" id="to-top"></a>
+	</p>
+	
 	<div class="wp-pagenavi">
 	    <span class='pages'>第 {{ paginator.page }} 页，共 {{ paginator.total_pages }} 页</span>
 
@@ -76,3 +80,19 @@ layout: default
 
 	</div>
 </div>
+<script>
+    //回到页面顶部
+    $("#to-top").click(function(){
+        $('body,html').animate({scrollTop:0},500); //点击按钮让其回到页面顶部
+    });
+
+    $(window).scroll(function() {
+        var current_height=window.pageYOffset; //滚动条距顶端的距离
+        var height=$(window).height(); //浏览器时下窗口可视区域高度
+        if(current_height>=height/2){
+            $("#to-top").animate(500).show();
+        }else{
+            $("#to-top").animate(1500).hide();
+        }
+    });
+ </script>
