@@ -70,7 +70,7 @@ article, aside, footer, header, hgroup, nav, section { display: block; }
 	#et-secondary-menu li, #top-menu li { word-wrap: break-word; }
 
 .subtitlecontainer { text-decoration: none; color: #9B9B9B; font-weight: normal; font-family: "Microsoft YaHei" !important; padding-top: .5em; }
-.subtitle { color: #9B9B9B;}
+/* .subtitle { color: #9B9B9B;} */
 .subtitle:hover { text-decoration: none !important; color: #6B6B6B !important; }
 #subtitletrans a { transition: all 0.4s ease-in-out; }
 
