@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "关于Certificate、Provisioning Profile、App ID的介绍及其之间的关系"
+title:"关于Certificate、Provisioning Profile、App ID的介绍及其之间的关系"
 author: 自来也大人
 feature-img: "img/awakening_of_utumn.jpg"
 category: ios
