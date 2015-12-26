@@ -4,7 +4,7 @@ title:  "Apple所有常用证书，appID,Provisioning Profiles配置说明及制
 author: 自来也大人
 feature-img: "img/awakening_of_utumn.jpg"
 category: ios
-tag:转载
+tag: 转载
 ---
 
 ##苹果所有常用证书，appID,Provisioning Profiles配置说明及制作图文教程##
