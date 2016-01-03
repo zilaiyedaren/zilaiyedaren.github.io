@@ -3,6 +3,7 @@ layout: post
 title:  "Storyboard References"
 date:   2016-1-3
 author: 自来也大人
+feature-img: "img/touring.jpg"
 category: iOS
 tag: 转载
 ---
