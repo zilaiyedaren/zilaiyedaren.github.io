@@ -20,7 +20,7 @@ layout: default
 		      </a>
 		    </h1>
 		    <p id="subtitletrans" class="subtitlecontainer">
-		      {% if post.author %}  <a class="subtitle" href="{{ site.baseurl }}/about/" title="{{ post.author }}">{{ post.author }}</a>|{% endif %}
+		      {% if post.author %}  <a class="subtitle" href="{{ site.baseurl }}" title="{{ post.author }}">{{ post.author }}</a>|{% endif %}
 			  <a class="subtitle">{{ post.date | date: "%B %d, %Y" }}</a>
 		      {% if post.category and post.tags %} | <a class="subtitle">{{ category_content }}</a> <a class="subtitle">{{ tags_content }}</a>{% endif %}
 		    </p>
