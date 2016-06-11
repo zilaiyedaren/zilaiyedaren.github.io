@@ -4,5 +4,16 @@ title: 近期文章
 permalink: /recent-article/
 feature-img: "img/sample_feature_img_2.png"
 ---
-
-## 自来也大人
+<section id="archive">
+  {%for post in site.posts %} 
+    {% unless post.next %}
+      <h3>{{ post.date | date: '%Y' }}</h3>
+      <ul class="this">
+      <li>
+        <time>{{ post.date | date:"%b %-d" }}</time>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{{ post.url }}">{{ post.title }}
+      </a>
+      </li>
+  {% endfor %}
+  </ul>
+</section>
