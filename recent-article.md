@@ -9,6 +9,7 @@ feature-img: "img/sample_feature_img_2.png"
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y' }}</h3>
       <ul class="this">
+    {% endunless %}
       <li>
         <time>{{ post.date | date:"%b %-d" }}</time>&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="{{ post.url }}">{{ post.title }}
