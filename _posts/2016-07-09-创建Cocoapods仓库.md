@@ -4,7 +4,7 @@ title:  "创建Cocoapods仓库"
 date:   2016-07-09
 author: 自来也大人
 feature-img: "img/touring.jpg"
-category: iOS
+category: ios
 tag: 原创
 ---
 每种语言发展到一个阶段，就会出现相应的依赖管理工具, 或者是中央代码仓库。如
