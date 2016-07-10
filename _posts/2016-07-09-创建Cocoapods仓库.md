@@ -7,10 +7,6 @@ feature-img: "img/touring.jpg"
 category: iOS
 tag: 原创
 ---
-https://guides.cocoapods.org/making/specs-and-specs-repo.html
-https://blog.cnbluebox.com/blog/2014/03/31/cocoapodsdai-ma-guan-li/
-http://www.jianshu.com/p/fdc74f7d516b?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&from=groupmessage&isappinstalled=0
-
 每种语言发展到一个阶段，就会出现相应的依赖管理工具, 或者是中央代码仓库。如
 
 ```
@@ -274,3 +270,11 @@ end
 ```
 这就是我们需要的一个制作的demo，然后可以将除Example文件夹之外的其它的文件提交到我们私有Git库中。
 其他的操作步骤还是相同的。
+
+其他的参看文章:
+
+[Using Pod Lib Create](https://guides.cocoapods.org/making/using-pod-lib-create.html)
+
+[Cocoapods代码管理](https://blog.cnbluebox.com/blog/2014/03/31/cocoapodsdai-ma-guan-li/)
+
+[使用Cocoapods创建私有podspec](http://blog.wtlucky.com/blog/2015/02/26/create-private-podspec/)
