@@ -151,6 +151,7 @@ Spec Repo是所有的Pods的一个索引,所有公开的Pods都在这个里面�
 ```
 
 ##### 制作自己的私有库
+
 1.先创建出一个私有仓库，大家可以在OSChina上创建一个私有库（免费的）。
 2.先到你要创建私有库的目录下面这里我创建的目录时MyTestPod，然后把刚才创建的私有库从remote端clone到本地(建议使用Git名进行操作，很方便)
 3.在PodTestLib文件目录下，创建一个Classes文件，用来存放源码文件.最好在Classes下再创建一层目录显示自己自制组建的名称这个作为s.name(TestComponents)和(podspec配置文件的名称一致)TestComponents.podspec
@@ -199,7 +200,7 @@ end
 在对私有库进行升级维护的时候，只需要重新编辑.podspec文件，修改相应的版本号和对应的配置信息即可，再次执行下面命令即可：
 
 ```
-	pod repo push BrucePods TestComponents.podspec
+	pod repo push KentPods TestComponents.podspec
 ```
 想创建分支的话，只需对subspec进行设置即可。
 
@@ -207,14 +208,14 @@ end
 如果想要删除私有库，需要分两步，第一步删除OSChina上创建的私有库。第二部，到~/.cocoapods/repos目录下，通过以下命令行即可删除：
 
 ```
-	rm -rf BrucePods
+	rm -rf KentPods
 ```
 
 13.其他项目组成员如何使用私有库
 首先在OSChina上面给其他成员添加相应的权限。另外，在其终端上执行以下命令即可：
 
 ```
-	pod repo add BrucePods https://git.oschina.net/zialiye/PodTestLib.git
+	pod repo add KentPods https://git.oschina.net/zialiye/PodTestLib.git
 ```
 
 #####制作属于自己的公有库
